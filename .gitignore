@@ -39,7 +39,7 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-.design/
+/.design
 .preview.jpg
-README-template.md
-style-guide.md
+.README-template.md
+.style-guide.md
