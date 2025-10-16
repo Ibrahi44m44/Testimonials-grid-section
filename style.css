@@ -1,0 +1,130 @@
+:root {
+    /* Primary */
+    --Purple-50: hsl(260, 100%, 95%);
+    --Purple-300: hsl(264, 82%, 80%);
+    --Purple-500: hsl(263, 55%, 52%);
+
+    /* secondary */
+    --White: hsl(0, 0%, 100%);
+    --Grey--100: hsl(214, 17%, 92%);
+    --Grey--200: hsl(0, 0%, 81%);
+    --Grey--400: hsl(224, 10%, 45%);
+    --Grey--500: hsl(217, 19%, 35%);
+    --Dark--blue: hsl(219, 29%, 14%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+body {
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: var(--Grey--100);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px;
+    display: grid;
+    gap: 25px;
+    grid-template-areas: "c1 c1 c2 c3"
+        "c4 c5 c5 c3";
+}
+
+@media (max-width:763px) {
+    .container {
+        max-width: 663px;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 892px;
+    }
+}
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 1100px;
+
+    }
+}
+
+.container .card {
+    padding: 30px 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    color: var(--Grey--100);    
+}
+
+.container .card:nth-child(1) {
+    grid-area: c1;
+    background-color: var(--Purple-500);
+}
+
+.container .card:nth-child(2) {
+    grid-area: c2;
+    background-color: var(--Grey--400);
+
+}
+
+.container .card:nth-child(3) {
+    grid-area: c4;
+    background-color: var(--White);
+    color: var(--Grey--400);
+
+}
+
+.container .card:nth-child(4) {
+    grid-area: c5;
+    background-color: var(--Black);
+}
+
+.container .card:nth-child(5) {
+    grid-area: c3;
+    background-color: var(--White);
+    color: var(--Grey--400);
+    
+}
+
+.container .card .head { 
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6em;
+}
+
+.container .card .head .image {}
+
+.container .card .head .image img {
+    border-radius: 50%;
+    margin-right: 2em;
+}
+
+.container .card .head .text {}
+
+.container .card .head .text .full-name {
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+
+.container .card .head .text .jop {}
+
+.container .card .content {}
+
+.container .card .content .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.container .card .content .subtitle {
+    line-height: 1.8;
+}
